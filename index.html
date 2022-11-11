@@ -1,0 +1,125 @@
+
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="utf-8">
+    <title>test</title>
+    
+
+
+<!--==========ここからCSS==========-->
+
+    <style type="text/css">
+      * {
+        margin: 0;
+        padding: 0;
+      }
+
+      #tab1{
+        border: solid 3px;
+      }
+      #tab2{
+        border: solid 3px;
+      }
+      #tab3{
+        border: solid 3px;
+      }
+      #nav1{
+        display: flex;
+
+      }
+
+      .str1{
+        position: absolute;
+        display: none;
+      }
+      .str_1{
+        
+        }
+
+      .str2{
+          position: absolute;
+        display: none;
+        
+      }
+      .str_2{
+          
+        }
+
+        .str3{
+          position: absolute;
+        display:none ;
+        
+      }
+      .str_3{
+      }
+
+    </style>
+<!--====================-->
+
+  </head>
+  <header>
+
+
+    <nav id="nav1">
+      <a href="#" id="tab1">TAB1</a>
+      <a href="#" id="tab2">TAB2</a>
+      <a href="#" id="tab3">TAB3</a>
+  </nav>
+</header>
+
+<div id="str1" class="str1">
+  <h1>タブ１</h1>
+</div>
+
+
+<div id="str2" class="str2">
+  <h1>タブ2</h1>
+</div>
+
+
+
+<div id="str3" class="str3">
+  <h1>タブ3</h1>
+</div>
+<!--==========ここからJavaScript==========-->
+
+    <script>
+
+      function changeStr(){
+        document.getElementById('str1').classList.remove('str1');
+        document.getElementById('str2').classList.add('str2');
+        document.getElementById('str3').classList.add('str3');
+        document.getElementById('str1').classList.add('str_1');
+      };
+      document.getElementById('tab1').addEventListener('click' , function(){
+        changeStr();
+      });
+
+      function changeStr1(){
+        document.getElementById('str1').classList.add('str1');
+        document.getElementById('str3').classList.add('str3');
+        document.getElementById('str2').classList.remove('str2');
+        document.getElementById('str2').classList.add('str_2');
+      };
+      document.getElementById('tab2').addEventListener('click' , function(){
+        changeStr1();
+      });
+
+      function changeStr2(){
+        document.getElementById('str1').classList.add('str1');
+        document.getElementById('str2').classList.add('str2');
+        document.getElementById('str3').classList.remove('str3');
+        document.getElementById('str3').classList.add('str_3');
+
+
+      };
+      document.getElementById('tab3').addEventListener('click' , function(){
+        changeStr2();
+      });
+    </script>
+<!--====================-->
+
+  </body>
+
+</html>
